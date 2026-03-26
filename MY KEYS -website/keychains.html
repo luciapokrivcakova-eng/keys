@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <style>
+body {
+    background-image: url("keychain.gif");
+     background-size: cover; 
+     background-position: center; 
+     background-repeat: no-repeat; 
+    margin: 0; 
+ display: flex;
+ flex-direction: column; 
+ height: 100vh; }
+
+
+
+    </style>
+    <head>
+   
+    <title>keychain</title>
+</head>
+<body>
+   
+
+  <p class="hoverText" style="color: brown; 
+  font-size: 100px; margin-left: 60%; 
+  "> <a style="color: brown;" href="page3.html">cling</a> </p>
+
+ 
+
+   <p class="hoverText" style="color: yellow;
+  font-size: 60px; margin-left: 10%; margin-top: 0%;
+  "> cling </p>
+
+
+
+ <p class="hoverText" style="color: blue;
+  font-size: 80px; margin-left: 60%;  margin-right: 20%; margin-bottom: 40%;
+  "> cling </p>
+
+<a style="color: orange;" href="spiral.html"><p class="hoverText" style="color: orange;
+  font-size: 90px; margin-left: 30%;  margin-right: 20%; margin-top: -40%;
+  "> cling </p> </a>
+
+  <audio id="sound" src="sound.mp3"></audio>
+
+<script>
+const texts = document.querySelectorAll(".hoverText");
+const audio = document.getElementById("sound");
+
+texts.forEach(function(text) {
+
+  text.addEventListener("mouseenter", function() {
+    audio.currentTime = 0;
+    audio.play();
+  });
+
+  text.addEventListener("mouseleave", function() {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+
+});
+</script>
+
+</body>
+</html>
